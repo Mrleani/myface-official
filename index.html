@@ -403,6 +403,8 @@
   .btn-solid.code:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--code-glow); }
   .btn-solid.nepster{ background:linear-gradient(135deg, var(--nepster), #1f9f5c); color:var(--nepster-ink); }
   .btn-solid.nepster:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--nepster-glow); }
+  .btn-solid.kino{ background:linear-gradient(135deg, var(--kino), #c11722); color:#fff; }
+  .btn-solid.kino:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--kino-glow); }
 
   .btn-outline{ padding:10px 17px; border-radius:10px; font-weight:600; font-size:0.83rem; display:inline-flex; align-items:center; gap:8px; text-decoration:none; cursor:pointer; border:1px solid var(--border-strong); color:var(--text); background:rgba(255,255,255,0.03); transition:transform .25s var(--ease), border-color .25s var(--ease); }
   .btn-outline:hover{ transform:translateY(-2px); border-color:var(--tweak); color:var(--tweak); }
@@ -414,7 +416,7 @@
   .product-card.kino:hover .product-banner img{ transform:scale(1.05); }
   .product-card.kino .product-icon{ background:rgba(255,47,58,0.10); border:1px solid rgba(255,47,58,0.30); }
   .product-card.kino .status-pill{ color:var(--kino); border-color:rgba(255,47,58,0.35); }
-  .product-card.kino .status-pill i{ background:var(--kino); }
+  .product-card.kino .status-pill i{ background:var(--kino); animation:pulseDot 2.2s ease-out infinite; }
   .product-card.kino .feature-list svg{ color:var(--kino); }
   .product-card.kino .notify-link{ color:var(--kino); border-bottom:1px dashed rgba(255,47,58,0.4); }
 
@@ -608,7 +610,7 @@
     <div class="wrap hero-inner">
       <div data-reveal>
         <span class="eyebrow">myface network</span>
-        <h1>ერთი ბრენდი.<br><span class="accent">მრავალი მიმართულება.</span></h1>
+        <h1>ერთი ბრენდი.<br><span class="accent">ორი ინტელექტუალური პროდუქტი.</span></h1>
         <p class="lead">myface არის თანამედროვე ტექნოლოგიური ბრენდი, რომელიც ავითარებს ხელოვნური ინტელექტისა და კომუნიკაციის პროდუქტებს. ჩვენი მისიაა — ავტომატიზაცია და ტექნოლოგია გავხადოთ მარტივი, სწრაფი და ხელმისაწვდომი ყველასთვის.</p>
         <div class="hero-actions">
           <a href="#products" class="btn btn-primary">პროდუქტების ნახვა</a>
@@ -635,7 +637,7 @@
 <div class="line"><span class="ln">5</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"Tweak AI"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">},</span></div>
 <div class="line"><span class="ln">6</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"Tweak Code AI"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">},</span></div>
 <div class="line"><span class="ln">7</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"chatface"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"soon"</span> <span class="tok-punc">},</span></div>
-<div class="line"><span class="ln">8</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"kinohub"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"soon"</span> <span class="tok-punc">}</span></div>
+<div class="line"><span class="ln">8</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"kinohub"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">}</span></div>
 <div class="line"><span class="ln">9</span><span class="indent"></span><span class="tok-punc">],</span></div>
 <div class="line"><span class="ln">10</span><span class="indent"></span><span class="tok-key">"mission"</span><span class="tok-punc">:</span> <span class="tok-str">"AI, simplified."</span><span class="cursor-blink"></span></div>
 <div class="line"><span class="ln">11</span><span class="tok-punc">}</span></div>
@@ -812,11 +814,11 @@
           </span>
           <div class="product-top">
             <div class="product-icon" aria-hidden="true"><img src="data:image/jpeg;base64,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" alt=""></div>
-            <span class="status-pill"><i aria-hidden="true"></i>მალე</span>
+            <span class="status-pill"><i aria-hidden="true"></i>გახსნილია</span>
           </div>
           <h3>kinohub</h3>
           <p class="tagline">ფილმების, სერიალების, შეფასებებისა და მიმოხილვების პლატფორმა</p>
-          <p class="desc">kinohub არის myface ქსელის ახალი პლატფორმა კინოსა და სერიალების მოყვარულთათვის — ერთ სივრცეში მოექცევა ვრცელი კატალოგი, მომხმარებელთა რეიტინგები, დეტალური მიმოხილვები და პერსონალური რეკომენდაციები. შეძლებ ნანახის მონიშვნას, საკუთარი შეფასების დაწერას, სანახავების სიის შედგენას და სხვების აზრის გაცნობას მანამ, სანამ საღამოს ფილმს აირჩევ. პლატფორმა ამჟამად აქტიური მზადების პროცესშია და <b>მალე გაიხსნება</b>.</p>
+          <p class="desc">kinohub არის myface ქსელის ახალი პლატფორმა კინოსა და სერიალების მოყვარულთათვის — ერთ სივრცეში მოექცევა ვრცელი კატალოგი, მომხმარებელთა რეიტინგები, დეტალური მიმოხილვები და პერსონალური რეკომენდაციები. შეძლებ ნანახის მონიშვნას, საკუთარი შეფასების დაწერას, სანახავების სიის შედგენას და სხვების აზრის გაცნობას მანამ, სანამ საღამოს ფილმს აირჩევ. პლატფორმა <b>უკვე გახსნილია</b> და ხელმისაწვდომია ყველასთვის — უბრალოდ გადადი საიტზე და დაიწყე.</p>
 
           <ul class="feature-list">
             <li>
@@ -834,8 +836,11 @@
           </ul>
 
           <div class="cta-row">
-            <span class="btn-brand" aria-disabled="true">მალე გაიხსნება</span>
-            <a class="notify-link" href="mailto:myfacenet20@gmail.com?subject=kinohub%20-%20შემატყობინეთ%20გახსნისას">შემატყობინე →</a>
+            <a class="btn-solid kino" href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg>
+              გადადი საიტზე
+            </a>
+            <a class="notify-link" href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">kinohub.fly.dev →</a>
           </div>
         </article>
 
@@ -919,11 +924,11 @@
           </div>
         </div>
 
-        <div class="roadmap-item is-soon">
+        <div class="roadmap-item is-live">
           <div class="roadmap-dot" aria-hidden="true"><i></i></div>
           <div class="roadmap-body">
-            <div class="roadmap-head"><b>kinohub</b><span class="roadmap-tag">მალე</span></div>
-            <p>ფილმებისა და სერიალების შეფასებისა და მიმოხილვის პლატფორმა მზადების პროცესშია — რეიტინგები, რეცენზიები და პერსონალური რეკომენდაციები ერთ სივრცეში.</p>
+            <div class="roadmap-head"><b>kinohub გაიხსნა</b><span class="roadmap-tag">ცოცხალია</span></div>
+            <p>ფილმებისა და სერიალების შეფასებისა და მიმოხილვის პლატფორმა უკვე გახსნილია — რეიტინგები, რეცენზიები და პერსონალური რეკომენდაციები ერთ სივრცეში.</p>
           </div>
         </div>
       </div>
@@ -1061,7 +1066,7 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
             </span>
           </summary>
-          <p class="faq-answer">kinohub არის ფილმებისა და სერიალების პლატფორმა, სადაც შეძლებ ნანახის შეფასებას, მიმოხილვების წაკითხვასა და დაწერას, სანახავების სიის შედგენას და ახალი ფილმების აღმოჩენას პერსონალური რეკომენდაციებით. პლატფორმა მალე გაიხსნება.</p>
+          <p class="faq-answer">kinohub არის ფილმებისა და სერიალების პლატფორმა, სადაც შეძლებ ნანახის შეფასებას, მიმოხილვების წაკითხვასა და დაწერას, სანახავების სიის შედგენას და ახალი ფილმების აღმოჩენას პერსონალური რეკომენდაციებით. პლატფორმა უკვე გახსნილია — ეწვიე მისამართზე <a href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">kinohub.fly.dev</a>.</p>
         </details>
         <details class="faq-item">
           <summary>როგორ დაგიკავშირდეთ?
@@ -1106,7 +1111,7 @@
           <li><a href="https://tweak-code-ai-myface.fly.dev/" target="_blank" rel="noopener noreferrer">Tweak Code AI</a></li>
           <li><a href="#products">chatface</a></li>
           <li><a href="https://nepster-tux.vercel.app/" target="_blank" rel="noopener noreferrer">Nepster Tux</a></li>
-          <li><a href="#products">kinohub</a></li>
+          <li><a href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">kinohub</a></li>
         </ul>
       </div>
       <div class="footer-col">
