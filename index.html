@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myface — ოფიციალური ვებსაიტი</title>
-<meta name="description" content="myface — თანამედროვე ტექნოლოგიური ბრენდი, რომელიც ავითარებს Tweak AI-სა და chatface-ს, ასევე მინი-თამაშ Nepster Tux-ს — ინტელექტუალურ ინსტრუმენტებს პროდუქტიულობის, კომუნიკაციისა და გართობისთვის.">
+<meta name="description" content="myface — თანამედროვე ტექნოლოგიური ბრენდი, რომელიც ავითარებს Tweak AI-სა და chatface-ს, ასევე მინი-თამაშ Nepster Tux-ს — ინტელექტუალურ ინსტრუმენტებს პროდუქტიულობის, კომუნიკაციისა და გართობისთვის. მალე გამოვა myface Sports — სპორტული სოციალური ქსელი ფეხბურთზე, Formula 1-სა და UFC-ზე.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,6 +49,10 @@
     --kino: #ff2f3a;
     --kino-ink: #2a0206;
     --kino-glow: rgba(255,47,58,0.30);
+
+    --sport: #ff8a1f;
+    --sport-ink: #241202;
+    --sport-glow: rgba(255,138,31,0.30);
 
     --r-lg: 22px;
     --r-md: 14px;
@@ -405,6 +409,8 @@
   .btn-solid.nepster:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--nepster-glow); }
   .btn-solid.kino{ background:linear-gradient(135deg, var(--kino), #c11722); color:#fff; }
   .btn-solid.kino:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--kino-glow); }
+  .btn-solid.sport{ background:linear-gradient(135deg, var(--sport), #ff4d2d); color:var(--sport-ink); }
+  .btn-solid.sport:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -12px var(--sport-glow); }
 
   .btn-outline{ padding:10px 17px; border-radius:10px; font-weight:600; font-size:0.83rem; display:inline-flex; align-items:center; gap:8px; text-decoration:none; cursor:pointer; border:1px solid var(--border-strong); color:var(--text); background:rgba(255,255,255,0.03); transition:transform .25s var(--ease), border-color .25s var(--ease); }
   .btn-outline:hover{ transform:translateY(-2px); border-color:var(--tweak); color:var(--tweak); }
@@ -419,6 +425,22 @@
   .product-card.kino .status-pill i{ background:var(--kino); animation:pulseDot 2.2s ease-out infinite; }
   .product-card.kino .feature-list svg{ color:var(--kino); }
   .product-card.kino .notify-link{ color:var(--kino); border-bottom:1px dashed rgba(255,47,58,0.4); }
+
+  /* --- myface Sports --- */
+  .product-card.sport::before{ background:linear-gradient(90deg, var(--sport), transparent); }
+  .product-card.sport:hover{ transform:translateY(-6px); border-color:rgba(255,138,31,0.42); box-shadow:0 30px 60px -28px var(--sport-glow); }
+  .product-card.sport .product-icon{ background:rgba(255,138,31,0.10); border:1px solid rgba(255,138,31,0.32); color:var(--sport); }
+  .product-card.sport .status-pill{ color:var(--sport); border-color:rgba(255,138,31,0.35); }
+  .product-card.sport .status-pill i{ background:var(--sport); }
+  .product-card.sport .feature-list svg{ color:var(--sport); }
+  .product-card.sport .notify-link{ color:var(--sport); border-bottom:1px dashed rgba(255,138,31,0.4); }
+  .sport-banner{
+    background:
+      radial-gradient(120% 150% at 18% 0%, rgba(255,138,31,0.26), transparent 62%),
+      linear-gradient(135deg, #1a1207 0%, #0d0f14 100%);
+  }
+  .sport-banner svg{ width:100%; height:100%; transition:transform .5s var(--ease); }
+  .product-card.sport:hover .sport-banner svg{ transform:scale(1.05); }
 
   /* ============ HOW IT WORKS ============ */
   .steps-track{ display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; margin-top:20px; }
@@ -637,10 +659,11 @@
 <div class="line"><span class="ln">5</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"Tweak AI"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">},</span></div>
 <div class="line"><span class="ln">6</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"Tweak Code AI"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">},</span></div>
 <div class="line"><span class="ln">7</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"chatface"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"soon"</span> <span class="tok-punc">},</span></div>
-<div class="line"><span class="ln">8</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"kinohub"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">}</span></div>
-<div class="line"><span class="ln">9</span><span class="indent"></span><span class="tok-punc">],</span></div>
-<div class="line"><span class="ln">10</span><span class="indent"></span><span class="tok-key">"mission"</span><span class="tok-punc">:</span> <span class="tok-str">"AI, simplified."</span><span class="cursor-blink"></span></div>
-<div class="line"><span class="ln">11</span><span class="tok-punc">}</span></div>
+<div class="line"><span class="ln">8</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"kinohub"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"live"</span> <span class="tok-punc">},</span></div>
+<div class="line"><span class="ln">9</span><span class="indent2"></span><span class="tok-punc">{</span> <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"myface Sports"</span><span class="tok-punc">,</span> <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"soon"</span> <span class="tok-punc">}</span></div>
+<div class="line"><span class="ln">10</span><span class="indent"></span><span class="tok-punc">],</span></div>
+<div class="line"><span class="ln">11</span><span class="indent"></span><span class="tok-key">"mission"</span><span class="tok-punc">:</span> <span class="tok-str">"AI, simplified."</span><span class="cursor-blink"></span></div>
+<div class="line"><span class="ln">12</span><span class="tok-punc">}</span></div>
 </div>
         </div>
         <div class="panel-float"><span class="dot"></span>Tweak AI — LIVE</div>
@@ -649,8 +672,8 @@
 
     <div class="marquee-strip">
       <div class="marquee" aria-hidden="true">
-        <span><i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>AI, SIMPLIFIED<i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>AI, SIMPLIFIED</span>
-        <span><i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>AI, SIMPLIFIED<i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>AI, SIMPLIFIED</span>
+        <span><i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>MYFACE SPORTS<i></i>AI, SIMPLIFIED<i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>MYFACE SPORTS<i></i>AI, SIMPLIFIED</span>
+        <span><i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>MYFACE SPORTS<i></i>AI, SIMPLIFIED<i></i>MYFACE NETWORK<i></i>TWEAK AI<i></i>TWEAK CODE AI<i></i>CHATFACE<i></i>NEPSTER TUX<i></i>KINOHUB<i></i>MYFACE SPORTS<i></i>AI, SIMPLIFIED</span>
       </div>
     </div>
   </section>
@@ -682,7 +705,7 @@
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="eyebrow">პროდუქტების ოჯახი</span>
-        <h2>ხუთი პროდუქტი — ერთი ეკოსისტემა</h2>
+        <h2>ექვსი პროდუქტი — ერთი ეკოსისტემა</h2>
         <p>თითოეული პროდუქტი აგებულია myface-ის ტექნოლოგიურ საფუძველზე, თუმცა საკუთარი ხასიათითა და დანიშნულებით.</p>
       </div>
 
@@ -844,6 +867,105 @@
           </div>
         </article>
 
+        <!-- MYFACE SPORTS -->
+        <article class="product-card sport" data-reveal>
+          <span class="product-banner sport-banner" aria-hidden="true">
+            <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sportGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffb14d"/>
+                  <stop offset="1" stop-color="#ff4d2d"/>
+                </linearGradient>
+              </defs>
+
+              <!-- pitch lines -->
+              <g fill="none" stroke="rgba(255,138,31,0.16)" stroke-width="1">
+                <path d="M200 0v150M0 75h400"/>
+                <circle cx="200" cy="75" r="52"/>
+                <rect x="-46" y="34" width="80" height="82" rx="4"/>
+                <rect x="366" y="34" width="80" height="82" rx="4"/>
+              </g>
+
+              <!-- FOOTBALL -->
+              <g transform="translate(85,66)">
+                <circle r="27" fill="rgba(255,138,31,0.07)" stroke="rgba(255,138,31,0.28)" stroke-width="1"/>
+                <g fill="none" stroke="url(#sportGrad)" stroke-width="1.8" stroke-linejoin="round">
+                  <circle r="12.5"/>
+                  <path d="M0 -6.6l6.3 4.6-2.4 7.4h-7.8l-2.4-7.4z" fill="url(#sportGrad)" stroke="none"/>
+                  <path d="M0 -12.5v5.9M11 -3.9l-4.7 3.3M6.6 11.9l-2.4-7.4M-6.6 11.9l2.4-7.4M-11 -3.9l4.7 3.3"/>
+                </g>
+              </g>
+
+              <!-- FORMULA 1 -->
+              <g transform="translate(200,66)">
+                <circle r="27" fill="rgba(255,138,31,0.07)" stroke="rgba(255,138,31,0.28)" stroke-width="1"/>
+                <g fill="none" stroke="url(#sportGrad)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M-16 -5.5v8"/>
+                  <path d="M-16 0.5h5.5l3.5-4.5h8.5l4 4.5h6.5"/>
+                  <path d="M-16 4h26"/>
+                  <path d="M13.5 2.5h6.5"/>
+                  <circle cx="-8.5" cy="6.5" r="4.6"/>
+                  <circle cx="8.5" cy="6.5" r="4.6"/>
+                </g>
+              </g>
+
+              <!-- UFC -->
+              <g transform="translate(315,66)">
+                <circle r="27" fill="rgba(255,138,31,0.07)" stroke="rgba(255,138,31,0.28)" stroke-width="1"/>
+                <g fill="none" stroke="url(#sportGrad)" stroke-width="1.9" stroke-linejoin="round">
+                  <path d="M0 -13l9.2 3.8 3.8 9.2-3.8 9.2-9.2 3.8-9.2-3.8-3.8-9.2 3.8-9.2z"/>
+                  <path d="M-4.6 -0.5l3.2 3.4 6.2-6.6" stroke-linecap="round"/>
+                </g>
+              </g>
+
+              <g fill="rgba(245,246,250,0.45)" font-family="JetBrains Mono, monospace" font-size="8" letter-spacing="1.6" text-anchor="middle">
+                <text x="85" y="112">FOOTBALL</text>
+                <text x="200" y="112">FORMULA 1</text>
+                <text x="315" y="112">UFC</text>
+              </g>
+            </svg>
+          </span>
+
+          <div class="product-top">
+            <div class="product-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.9"/>
+                <path d="M12 6.6l3.7 2.7-1.4 4.4H9.7L8.3 9.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M12 3v3.6M20.6 9.3l-4.9 0M18.1 19.2l-3.8-5.5M5.9 19.2l3.8-5.5M3.4 9.3l4.9 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="status-pill"><i aria-hidden="true"></i>მალე</span>
+          </div>
+
+          <h3>myface Sports</h3>
+          <p class="tagline">სპორტული სოციალური ქსელი — ფეხბურთი, Formula 1 და UFC</p>
+          <p class="desc">myface Sports არის myface ქსელის ახალი სოციალური პლატფორმა სპორტის გულშემატკივრებისთვის. ერთ სივრცეში გაერთიანდება სამი მიმართულება — ფეხბურთი, Formula 1 და UFC: ცოცხალი ანგარიშები, ტურნირული ცხრილები, რბოლებისა და საბრძოლო ღამეების კალენდარი, სიახლეები და გულშემატკივრების ცოცხალი განხილვები. შეძლებ საკუთარი გუნდის, პილოტისა და მებრძოლის არჩევას, პროგნოზების გაკეთებას, პოსტების გამოქვეყნებას და სხვა გულშემატკივრებთან დისკუსიას პირდაპირ მატჩის მიმდინარეობისას. პლატფორმა ამჟამად მზადების პროცესშია და <b>მალე გამოვა</b>.</p>
+
+          <ul class="feature-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>ფეხბურთი:</b> ცოცხალი ანგარიშები, ტურნირული ცხრილები და მატჩის რეალურ დროში განხილვა.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>Formula 1:</b> რბოლების კალენდარი, კვალიფიკაცია და პილოტთა ჩემპიონატის სტატისტიკა.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>UFC:</b> ღონისძიებების ქარდები, მებრძოლთა პროფილები და გულშემატკივრების პროგნოზები.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>სოციალური ნაწილი:</b> პროფილი, პოსტები, კომენტარები, გამოკითხვები და გულშემატკივართა თემები.</span>
+            </li>
+          </ul>
+
+          <div class="cta-row">
+            <span class="btn-brand" aria-disabled="true">მალე გამოვა</span>
+            <a class="notify-link" href="mailto:myfacenet20@gmail.com?subject=myface%20Sports%20-%20შემატყობინეთ%20გახსნისას">შემატყობინე →</a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -929,6 +1051,14 @@
           <div class="roadmap-body">
             <div class="roadmap-head"><b>kinohub გაიხსნა</b><span class="roadmap-tag">ცოცხალია</span></div>
             <p>ფილმებისა და სერიალების შეფასებისა და მიმოხილვის პლატფორმა უკვე გახსნილია — რეიტინგები, რეცენზიები და პერსონალური რეკომენდაციები ერთ სივრცეში.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item is-soon">
+          <div class="roadmap-dot" aria-hidden="true"><i></i></div>
+          <div class="roadmap-body">
+            <div class="roadmap-head"><b>myface Sports</b><span class="roadmap-tag">მალე</span></div>
+            <p>სპორტული სოციალური ქსელი მზადების პროცესშია — ფეხბურთი, Formula 1 და UFC ერთ პლატფორმაზე, ცოცხალი ანგარიშებით, სიახლეებითა და გულშემატკივართა თემებით.</p>
           </div>
         </div>
       </div>
@@ -1069,6 +1199,14 @@
           <p class="faq-answer">kinohub არის ფილმებისა და სერიალების პლატფორმა, სადაც შეძლებ ნანახის შეფასებას, მიმოხილვების წაკითხვასა და დაწერას, სანახავების სიის შედგენას და ახალი ფილმების აღმოჩენას პერსონალური რეკომენდაციებით. პლატფორმა უკვე გახსნილია — ეწვიე მისამართზე <a href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">kinohub.fly.dev</a>.</p>
         </details>
         <details class="faq-item">
+          <summary>რა არის myface Sports?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <p class="faq-answer">myface Sports არის სპორტული სოციალური ქსელი, რომელიც აერთიანებს ფეხბურთს, Formula 1-სა და UFC-ს: ცოცხალი ანგარიშები, ტურნირული ცხრილები, რბოლებისა და საბრძოლო ღამეების კალენდარი, პროგნოზები და გულშემატკივართა განხილვები. პლატფორმა ჯერ არ არის გახსნილი — <strong>მალე გამოვა</strong>. გახსნისთანავე შეგატყობინებთ, თუ დაგვიწერ ელფოსტაზე.</p>
+        </details>
+        <details class="faq-item">
           <summary>როგორ დაგიკავშირდეთ?
             <span class="faq-icon" aria-hidden="true">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
@@ -1112,6 +1250,7 @@
           <li><a href="#products">chatface</a></li>
           <li><a href="https://nepster-tux.vercel.app/" target="_blank" rel="noopener noreferrer">Nepster Tux</a></li>
           <li><a href="https://kinohub.fly.dev/" target="_blank" rel="noopener noreferrer">kinohub</a></li>
+          <li><a href="#products">myface Sports</a></li>
         </ul>
       </div>
       <div class="footer-col">
